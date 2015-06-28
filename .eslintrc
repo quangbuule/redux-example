@@ -1,0 +1,20 @@
+{
+  "parser": "babel-eslint",
+  "settings": {
+    "ecmascript": 6,
+    "jsx": true
+  },
+  "plugins": [ "react" ],
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "rules": {
+    "new-parens": 0,
+    "no-shadow": 0,
+    "no-underscore-dangle": 0,
+    "no-console": 1,
+    "quotes": [ 1, "single" ],
+    "strict": 0
+  }
+}

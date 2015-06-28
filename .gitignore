@@ -1,0 +1,15 @@
+# OS temp files
+.DS_Store
+thumb.db
+
+# node_modules
+/node_modules
+
+# config files
+# /config/index.js
+
+# Log files
+/*.log
+
+# Dist
+/dist

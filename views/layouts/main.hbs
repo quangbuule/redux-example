@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redux Example</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <style>
+  .Application {
+    min-width: 320px;
+    max-width: 960px;
+    margin: auto;
+  }
+  </style>
+</head>
+<body>
+  <div id="main">{{{body}}}</div>
+  <script>
+    __INITIAL_STATE__ = {{{json-stringify initialState}}};
+  </script>
+  {{#each jsPaths}}
+  <script src="{{.}}"></script>
+  {{/each}}
+</body>
+</html>
