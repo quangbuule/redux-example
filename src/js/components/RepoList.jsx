@@ -15,7 +15,7 @@ class RepoList extends React.Component {
 
     return (
       <ol>
-        {repos.map(repo => <RepoListItem {...{ repo }} />)}
+        {repos.map(repo => <RepoListItem key={repo.get('id')} {...{ repo }} />)}
       </ol>
     );
   }
