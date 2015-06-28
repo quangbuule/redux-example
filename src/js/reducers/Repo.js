@@ -6,13 +6,6 @@ const initialState = Immutable.fromJS({});
 
 export default createReducer(initialState, {
   /**
-   * This will receive and initialize state from __INITIAL_STATE__.Repo
-   */
-  [ActionTypes.init](state) {
-    return Immutable.fromJS(state);
-  },
-
-  /**
    * Because github use header for pagination, so we should receive res from
    * api call and store res to store's state also.
    *

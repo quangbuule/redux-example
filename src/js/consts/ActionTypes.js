@@ -1,7 +1,6 @@
 import keyMirror from 'react/lib/keyMirror';
 
 export default {
-  init: '@@INIT',
 
   Repo: keyMirror({
     getByUsername: null,
