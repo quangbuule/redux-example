@@ -15,9 +15,9 @@ npm run dev
 
 ##How it works
 ###API
-Thanks to React and Redux, Server side and client side will run almost the same code for rendering.
+Thanks to React and Redux, Server side and client side calls will run almost the same code for rendering.
 
-The differences are how `api` calls from client and from server (running the same code with client) are acheived. Server side calls may send some more information that is different from client, such as an `accessToken` field (which is received from each request's session), or may send to another api-server.
+The differences are in how `api` calls from the client and from the server (running the same code with client) are achieved. Server side calls may send information that is different from client, such as an `accessToken` field (which is received from each request's session), or may send to another api-server.
 
 The `api` methods should be therefore be different between server and client.
 You can take a look at implementations of the `api` method on the server (/server/render.js) and client (/src/js/main.js).
