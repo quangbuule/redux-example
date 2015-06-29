@@ -24,7 +24,7 @@ You can take a look at implementations of the `api` method on the server (/serve
 
 ###Why Immutable?
 
-Data changing overtime can cause some unpredictable errors. Immutable makes sure the referenced objects won't have their data changed over time. If you want to change the data, you must reference it to another object. For example:
+Data changing over time can cause some unpredictable errors. Immutable makes sure the referenced objects won't have their data changed over time. If you want to change the data, you must reference it to another object. For example:
 
 ```js
 handleStarButtonClick() {
