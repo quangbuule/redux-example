@@ -20,7 +20,7 @@ Thanks to React and Redux, Server side and client side calls will run almost the
 The differences are in how `api` calls from the client and from the server (running the same code with client) are achieved. Server side calls may send information that is different from client, such as an `accessToken` field (which is received from each request's session), or may send to another api-server.
 
 The `api` methods should therefore be different between server and client.
-You can take a look at implementations of the `api` method on the server (/server/render.js) and client (/src/js/main.js).
+You can take a look at implementations of the `api` method on the server (/lib/render.js) and client (/src/js/main.js).
 
 ###Why Immutable?
 
