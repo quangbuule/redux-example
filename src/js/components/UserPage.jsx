@@ -5,10 +5,10 @@ import * as RepoActionCreators from '../actions/repo';
 import * as UserActionCreators from '../actions/user';
 import RepoList from './RepoList';
 
-@prepareRoute(async function ({ redux, params: { username } }) {
+@prepareRoute(async function ({ store, params: { username } }) {
   return await * [
-    redux.dispatch(RepoActionCreators.getByUsername(username)),
-    redux.dispatch(UserActionCreators.getOneByUsername(username))
+    store.dispatch(RepoActionCreators.getByUsername(username)),
+    store.dispatch(UserActionCreators.getOneByUsername(username))
   ];
 })
 @connect(({ Repo, User }) => ({ Repo, User }))
