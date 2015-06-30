@@ -10,7 +10,7 @@ export default function prepareRoute(prepareFn) {
       static prepareRoute = prepareFn
 
       static contextTypes = {
-        redux: PropTypes.object.isRequired
+        store: PropTypes.object.isRequired
       }
 
       render() {
@@ -21,11 +21,11 @@ export default function prepareRoute(prepareFn) {
 
       componentDidMount() {
         const {
-          context: { redux },
+          context: { store },
           props: { params, location }
         } = this;
 
-        prepareFn({ redux, params, location });
+        prepareFn({ store, params, location });
       }
     };
 }
