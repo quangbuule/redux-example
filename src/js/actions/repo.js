@@ -21,7 +21,7 @@ export function getByUsername(username) {
     username,
     res: await api(`/users/${username}/repos`, {
       sort: 'updated',
-      dierection: 'desc'
+      direction: 'desc'
     })
   });
 }
