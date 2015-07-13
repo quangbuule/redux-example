@@ -1,8 +1,8 @@
 import _ from 'lodash';
-import { createStore, composeReducers } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import * as reducers from '../reducers';
 
-function promiseMiddleware(api, getState) {
+function promiseMiddleware(api, { getState }) {
   return next =>
     function _r(action) {
       if (action && _.isFunction(action.then)) {
@@ -17,9 +17,10 @@ function promiseMiddleware(api, getState) {
     };
 }
 
-export default function (api, intialState) {
-  const Store = createStore(composeReducers(reducers), intialState,
-    ({ getState }) => [ promiseMiddleware(api, getState) ]);
+export default function (api, initialState) {
+  const createStoreWithMiddleware = applyMiddleware(promiseMiddleware.bind(null,
+    api))(createStore);
+  const reducer = combineReducers(reducers);
 
-  return Store;
+  return createStoreWithMiddleware(reducer, initialState);
 }

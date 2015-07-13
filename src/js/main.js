@@ -1,7 +1,7 @@
 import React from 'react';
 import History from 'react-router/lib/BrowserHistory';
 import Router from './components/Router';
-import { Provider } from 'redux/react';
+import { Provider } from 'react-redux';
 import createStore from './lib/createStore';
 import request from 'superagent';
 import qs from 'qs';
