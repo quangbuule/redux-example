@@ -2,7 +2,7 @@
 Also includes `ReactRouter`, `Immutable` for Universal (isomorphic) application. This is good start for those who want a full solution to work with a RESTful API.
 This project is written with ES7 and uses `Babel` to transpile to ES5.
 
-[Redux v1.0.0-rc](https://github.com/gaearon/redux/releases/tag/v1.0.0-rc) is now available on npm. You can view the example for [redux@v1.0.0-rc](https://github.com/quangbuule/redux-example/tree/redux%40v1.0.0-rc) on branch [redux@rc](https://github.com/quangbuule/redux-example/tree/redux%40rc).
+[Redux v1.0.0-rc](https://github.com/gaearon/redux/releases/tag/v1.0.0-rc) is now available on npm. You can view the example for [redux@v1.0.0-rc](https://github.com/quangbuule/redux-example/tree/redux%40v1.0.0-rc) on branch [redux@rc](https://github.com/quangbuule/redux-example/tree/redux%40v1.0.0-rc).
 
 ##Installation
 ```
