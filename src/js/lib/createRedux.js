@@ -17,12 +17,12 @@ function promiseMiddleware(api, getState) {
     };
 }
 
-export default function (api, intialState) {
+export default function (api, initialState) {
   const dispatcher = createDispatcher(
     composeStores(reducers),
     getState => [ promiseMiddleware(api, getState) ]
   );
-  const redux = createRedux(dispatcher, intialState);
+  const redux = createRedux(dispatcher, initialState);
 
   return redux;
 }
