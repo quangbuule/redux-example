@@ -12,3 +12,7 @@ export default createReducer(initialState, {
     });
   }
 });
+
+export function isUserLoaded(state, username) {
+  return state.User.has(username);
+}

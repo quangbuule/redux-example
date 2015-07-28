@@ -1,15 +1,22 @@
 import React from 'react';
 import { connect } from 'redux/react';
 import { prepareRoute } from '../decorators';
+import { isUserLoaded } from '../reducers/User';
+import { isRepoLoadedForUser } from '../reducers/Repo';
 import * as RepoActionCreators from '../actions/repo';
 import * as UserActionCreators from '../actions/user';
 import RepoList from './RepoList';
 
 @prepareRoute(async function ({ redux, params: { username } }) {
-  return await * [
-    redux.dispatch(RepoActionCreators.getByUsername(username)),
-    redux.dispatch(UserActionCreators.getOneByUsername(username))
-  ];
+  const currentState = redux.getState();
+  let promises = [];
+  if(!isUserLoaded(currentState, username)) {
+    promises.push(redux.dispatch(UserActionCreators.getOneByUsername(username)));
+  }
+  if(!isRepoLoadedForUser(currentState, username)) {
+    promises.push(redux.dispatch(RepoActionCreators.getByUsername(username)));
+  }
+  return await * promises;
 })
 @connect(({ Repo, User }) => ({ Repo, User }))
 class UserPage extends React.Component {

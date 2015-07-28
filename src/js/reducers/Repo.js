@@ -33,3 +33,7 @@ export default createReducer(initialState, {
     });
   }
 });
+
+export function isRepoLoadedForUser(state, username) {
+  return state.Repo.has(`users/${username}`);
+}
